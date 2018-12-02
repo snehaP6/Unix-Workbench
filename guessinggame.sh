@@ -12,8 +12,13 @@ do
 	if [[ $filecount -eq $userresponse ]]
 	then
             echo "You are right...No of files in current directory is $userresponse"
-	else 
-      		echo "Oops..your guess is either too high or too low...Please guess correct number of files in the current directory"    
+	else
+	 if [[ $filecount -gt $userresponse ]]	
+	 then 
+      		echo "Your guess is too low..." 
+   	else
+	 	echo "Your guess is too high..." 
+	fi
 	fi        
 done
 
